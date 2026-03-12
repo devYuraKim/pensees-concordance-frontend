@@ -1,73 +1,30 @@
-# React + TypeScript + Vite
+# pensees-concordance
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **cross-reference engine** for **Blaise Pascal’s 《Pensées》**. Mapping the labyrinth of fragments (**Lafuma, Brunschvicg, Sellier and Le Guern**) into a single unified data structure.
 
-Currently, two official plugins are available:
+<b>블레즈 파스칼의 《팡세》</b>를 위한 **교차 참조 엔진**. 여러 판본(**Lafuma, Brunschvicg, Sellier, 그리고 Le Guern**)들의 단편들을 하나의 통합된 데이터 구조로 매핑합니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## How This Project Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<i>“Which Lafuma fragment corresponds to Brunschvicg 512?”</i>
 
-## Expanding the ESLint configuration
+I got tired of looking this up. I had to leaf through **over 40 pages** of concordance table. So I built this.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project maps the four main editions—**Lafuma, Brunschvicg, Sellier, and Le Guern**—into a single unified structure.
+**Find the fragment. Read Pascal. That's it.**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+(FYI, the answer is 670)
+<br>
+<br>
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 프로젝트의 시작
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<i>"Brunschvicg 512번이 Lafuma에서는 몇 번이지?"</i>
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+이거 하나 찾으려고 **40페이지가 넘는** 판본 대조표를 뒤지다 지쳤습니다. 그래서 만들었습니다.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+이 프로젝트는 **Lafuma, Brunschvicg, Sellier, Le Guern** 네 개의 주요 판본을 하나의 데이터 구조로 통합합니다. **번호 찾느라 고생하지 마세요. 파스칼의 사유에만 집중하세요.**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+(참고로 답은 670입니다)
