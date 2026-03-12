@@ -1,9 +1,8 @@
+import { RouterProvider } from "react-router";
+import routes from "./router/routes";
+
 function App() {
-  return (
-    <>
-      <h1 className="text-amber-500">pensees-concordance</h1>
-    </>
-  );
+  return <RouterProvider router={routes} />;
 }
 
 export default App;
